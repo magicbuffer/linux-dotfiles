@@ -1,0 +1,15 @@
+[Unit]
+Description=Lock the screen on resume from suspend
+Before=sleep.target
+#After=suspend.target 
+
+[Service]
+User=dimitri
+#Type=forking
+Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/xset dpms force suspend
+ExecStart=/usr/local/bin/slock
+
+[Install]
+WantedBy=sleep.target
+#WantedBy=suspend.target

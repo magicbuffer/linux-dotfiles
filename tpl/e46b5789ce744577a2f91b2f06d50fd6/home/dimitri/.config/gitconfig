@@ -1,0 +1,7 @@
+[user]
+	email      = "d@magicbuffer.net"
+	name       = "dimitri"
+	signingkey = "1801EB1C873E5FCD2CA6DF9C96C59EB5E29D5EAC"
+
+[commit]
+	gpgsign = true

@@ -1,0 +1,15 @@
+setopt extended_glob
+setopt glob_dots
+setopt numeric_glob_sort
+setopt pushd_silent
+setopt auto_name_dirs
+setopt auto_resume
+setopt brace_ccl
+setopt correct
+setopt hist_reduce_blanks
+setopt list_packed
+setopt clobber
+setopt menu_complete
+setopt beep
+setopt list_beep
+setopt ignore_eof

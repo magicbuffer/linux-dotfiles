@@ -1,0 +1,63 @@
+"set nocompatible
+
+" Terminal
+set t_Co=256
+set term=xterm-256color
+set termencoding=utf-8
+
+set formatoptions-=r
+set hlsearch!
+set incsearch
+set tabstop=4
+set shiftwidth=4
+
+" Text editing
+set backspace=indent,eol,start
+set cino=:0 " No indent for case:/default:
+set shiftwidth=4
+set tabstop=4
+
+" Interface
+set guifont=DejaVu_Sans_Mono:h12
+set hidden
+set hlsearch
+set nowrap
+set ruler
+set wildmenu
+set wildmode=longest:full,full
+set number
+set laststatus=2
+set showtabline=2
+
+" Commands that shell out tend to assume a bourne shell
+set shell=sh
+
+" If we don't have vim plug installed, install it
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+" vim-plug
+call plug#begin('~/.config/vim/plugins')
+
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'fatih/vim-go'
+Plug 'jonathanfilip/vim-lucius'
+
+call plug#end()
+
+" Minimalist
+syntax on
+colorscheme lucius
+LuciusBlack
+"highlight Normal ctermbg=NONE
+"highlight nonText ctermbg=NONE
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
+
+" ctrlp
+"autocmd VimEnter * silent! unmap <c-p>|map <c-p> :CtrlPMixed<CR>

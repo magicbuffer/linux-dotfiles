@@ -1,0 +1,1 @@
+local n=$(trim-prefix "0d" "$1"); echo 0x$(echo "obase=16; ibase=10; $(echo -n $n | tr '[:lower:]' '[:upper:]')" | bc)

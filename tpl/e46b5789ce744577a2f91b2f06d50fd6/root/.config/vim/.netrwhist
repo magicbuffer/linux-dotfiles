@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/dna/.config/gtk-2.0'
+let g:netrw_dirhist_2='/home/dna/.config/gtk-3.0'
+let g:netrw_dirhist_3='/home/dna/.zsh'
+let g:netrw_dirhist_4='/home/dna/.zsh/functions'
+let g:netrw_dirhist_5='/home/dna/.antigen'
+let g:netrw_dirhist_6='/home/dna/.zsh'

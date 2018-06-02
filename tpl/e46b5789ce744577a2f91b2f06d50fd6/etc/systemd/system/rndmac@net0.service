@@ -1,0 +1,15 @@
+[Unit]
+Description=Randomize %I interface mac address
+Wants=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/usr/local/bin/ethermac -i %I --assign-by-name "Intel Corporate"
+Type=forking
+NotifyAccess=main
+RemainAfterExit=no
+User=root
+LimitNPROC=1

@@ -1,0 +1,22 @@
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+:LOGGING - [0:0]
+
+# log for monitoring daemons
+-A LOGGING -m limit  --limit 5/m --limit-burst 10 -j LOG
+-A LOGGING -j DROP
+
+# State of the art firewall
+-A INPUT -p icmp -j ACCEPT 
+-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT 
+-A INPUT -i lo -j ACCEPT
+# torrents
+#-A INPUT -p tcp --dport 45000 -j ACCEPT 
+# dlna
+-A INPUT -p tcp --dport 8200 -j ACCEPT
+-A INPUT -p tcp -j REJECT --reject-with tcp-reset 
+-A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable 
+-A INPUT -j REJECT --reject-with icmp-proto-unreachable 
+COMMIT

@@ -1,0 +1,11 @@
+#!/bin/env zsh
+
+if [[ -z $1 ]]
+then
+	echo "Usage: wifi <profile>"
+	return -1
+fi
+
+sudo netctl stop-all
+sudo ifconfig net1 down
+sudo netctl start "$1"

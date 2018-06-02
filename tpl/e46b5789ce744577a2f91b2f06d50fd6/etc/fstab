@@ -1,0 +1,6 @@
+# Main FS = /dev/sda2
+UUID=9189c01d-2bc4-4153-96c2-196e1eb8ecf1	/         	ext4      	rw,relatime,data=ordered,noatime,discard	0 1
+
+# ESP = /dev/sda1
+UUID=56FB-79C3    		 	 	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro,discard	0 2
+

@@ -1,0 +1,2 @@
+# http://www.zsh.org/mla/workers/2001/msg02410.html
+NO_SWITCH="yes" command bash "$@"

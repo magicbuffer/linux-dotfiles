@@ -1,0 +1,66 @@
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=20
+markup=none
+
+[tor]
+command=~/.config/i3/blocks/pid.sh /var/run/tor.pid 
+interval=1
+separator=false
+separator_block_width=10
+
+[cyberghost]
+command=~/.config/i3/blocks/pid.sh /var/run/openvpn.pid 
+interval=1
+separator=false
+separator_block_width=10
+
+[volume]
+command=~/.config/i3/blocks/volume.sh
+instance=Master
+interval=1
+signal=10
+separator=false
+separator_block_width=10
+
+[cpu]
+command=~/.config/i3/blocks/cpu.pl -w 50 -c 75
+interval=1
+
+[memory]
+label=
+interval=1
+
+[disk]
+label=
+interval=2
+
+[iface]
+label=
+instance=net0
+color=#00ff7f
+interval=1
+
+[iface]
+label=
+instance=net1
+color=#00ff7f
+interval=1
+
+[battery]
+command=~/.config/i3/blocks/battery.pl
+interval=1
+
+[time]
+label=
+command=date '+%d.%m.%Y'
+interval=10
+
+[time]
+label=
+command=date '+%H:%M'
+interval=10
+
+[updates]
+command=~/.config/i3/blocks/update.py -q -b "#5fff5f" -u "#FFFF85"
+markup=pango
+interval= 3600

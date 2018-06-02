@@ -1,0 +1,15 @@
+emulate -L zsh
+
+if ! [[ -n "$1" ]]
+then
+    print "Usage: $0 \$URL/\$file" > &2
+    return 1
+fi
+
+FILE=$1
+MIME=$(curl --head $FILE | \
+       grep Content-Type | \
+       cut -d ' ' -f 2 | \
+       cut -d\; -f 1)
+MIME=${MIME%$'\r'}
+curl $FILE | see ${MIME} -
