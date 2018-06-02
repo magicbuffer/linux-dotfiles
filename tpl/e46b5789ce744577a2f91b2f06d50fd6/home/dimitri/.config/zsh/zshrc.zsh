@@ -1,7 +1,7 @@
 #!/usr/env zsh
 
 local f
-local here=$(realpath $(dirname "$1"))/.zsh
+local here=$(realpath $(dirname "$1"))/.config/zsh
 
 local _functions="$here/functions"
 local _autoload_functions="$here/autoload/functions"
