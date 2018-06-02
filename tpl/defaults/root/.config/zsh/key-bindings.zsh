@@ -79,8 +79,8 @@ bind2maps emacs             --    Home                           beginning-of-so
 bind2maps       viins vicmd --    Home                           vi-beginning-of-line
 bind2maps emacs             --    End                            end-of-somewhere
 bind2maps       viins vicmd --    End                            vi-end-of-line
-bind2maps emacs viins       --    Insert                         overwrite-mode
-bind2maps             vicmd --    Insert                         vi-insert
+bind2maps emacs             --    Insert                         overwrite-mode
+bind2maps       viins vicmd --    Insert                         vi-insert
 bind2maps emacs             --    Delete                         delete-char
 bind2maps       viins vicmd --    Delete                         vi-delete-char
 bind2maps emacs viins vicmd --    Up                             history-substring-search-up
@@ -121,5 +121,5 @@ bind2maps emacs viins vicmd -- -s \}                             magic-curly-bra
 bind2maps emacs viins vicmd -- -s \>                             magic-angle-brackets
 bind2maps emacs viins       -- -s "$key[Control]x"               zaw
 
-bind2maps emacs --    "$key[Control]u"               insert-unicode-char
+bind2maps emacs viins vicmd -- -s "$key[Control]u"               insert-unicode-char
 

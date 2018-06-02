@@ -1,7 +1,7 @@
 #!/usr/env zsh
 
 local f
-local here="$HOME/.config/zsh"
+local here=$(realpath $(dirname "$1"))/.config/zsh
 
 local _functions="$here/functions"
 local _autoload_functions="$here/autoload/functions"
@@ -39,14 +39,18 @@ if [[ -f $_antigen_local ]]
 then
 	source "$_antigen_local"
 else
-	local _antigen_git="$(mktemp)"
-	curl -L "https://git.io/antigen" > "$_antigen_git"
-	source "$_antigen_git"
-	rm "$_antigen_git"
+	if [[ ! -f $_antigen_git && $UID != 0 ]]
+	then
+		local _antigen_git="$(mktemp)"
+		curl -L "https://git.io/antigen" > "$_antigen_git"
+	fi
+
+	if [[ -f $_antigen_git ]]
+	then
+		source "$_antigen_git"
+	fi
 fi
-if is-callable antigen; then 
-	antigen init "$here/antigenrc"
-fi
+if is-callable antigen; then antigen init "$here/antigenrc"; fi
 
 # Aliases
 [[ -f "$_aliases" ]] && source "$_aliases"

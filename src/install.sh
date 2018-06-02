@@ -278,7 +278,7 @@ function installer_update_template()
 			installer_warning "The installation element does not exists '$target'"
 			continue
 		fi
-	
+
 		local target_owner=$(stat -c "%U:%G" "$target")
 		local target_perm=$(stat -c "%a" "$target")
 
@@ -337,18 +337,21 @@ then
 	machine_id=$(cat "/etc/machine-id")
 	[[ -z "$machine_id" ]] && installer_fatal "Unknown machine" || installer_info "Detected machine '$machine_id'"
 
-	template="$here/../tpl/$machine_id"
 fi
 
-[[ ! -d "$template" ]] && installer_fatal "template not found"
+template="$here/../tpl/defaults"
+template_override="$here/../tpl/$machine_id"
 
+[[ ! -d "$template" ]] && installer_fatal "template not found"
 
 case "$update" in
 	installation)
 		installer_update_installation "$template"
+		installer_update_installation "$template_override"
 		;;
 	template)
 		installer_update_template "$template"
+		installer_update_template "$template_override"
 		;;
 	*)
 		installer_fatal "Unknown update mode '$update'"
