@@ -3,11 +3,11 @@
 # DotFiles installer
 #
 
-#if [[ $UID != 0 ]]
-#then
-#	sudo $0 $@
-#	exit
-#fi
+if [[ $UID != 0 ]]
+then
+	sudo $0 $@
+	exit
+fi
 
 here=$(realpath $(dirname "$0"))
 debug=1
