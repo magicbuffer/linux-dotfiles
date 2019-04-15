@@ -340,7 +340,7 @@ function installer_install_packages()
 		local packages="$packages $package"
 	done < "$here/../pkg"
 
-	echo pacman -Sy "$packages"
+	pacman -Sy "$packages"
 }
 
 update="installation"
@@ -386,6 +386,7 @@ case "$update" in
 	packages)
 		installer_install_blackarch
 		installer_install_packages
+		;;
 	*)
 		installer_fatal "Unknown update mode '$update'"
 esac
