@@ -3,11 +3,11 @@
 # DotFiles installer
 #
 
-if [[ $UID != 0 ]]
-then
-	sudo $0 $@
-	exit
-fi
+#if [[ $UID != 0 ]]
+#then
+#	sudo $0 $@
+#	exit
+#fi
 
 here=$(realpath $(dirname "$0"))
 debug=1
@@ -313,6 +313,36 @@ function installer_usage()
 	exit 1
 }
 
+function installer_install_blackarch()
+{
+	local bootstrapper=$(mktemp)
+
+	curl -o "$bootstrapper" 'https://blackarch.org/strap.sh'
+	local hash=$(sha1 "$bootstrapper")
+	
+	if [[ $hash != '9f770789df3b7803105e5fbc19212889674cd503' ]]
+	then
+		installer_fatal "Invalid sha1 hash for blackarch bootstrapper 'strap.sh'"
+	fi
+
+	"$bootstrapper"
+}
+
+function installer_install_packages()
+{
+	local packages=
+
+	while read -r package
+	do
+		[[ ${package:0:1} == '#' ]] && continue
+		[[ ${package:0:1} == ''  ]] && continue
+
+		local packages="$packages $package"
+	done < "$here/../pkg"
+
+	echo pacman -Sy "$packages"
+}
+
 update="installation"
 
 while getopts "t:u:" o
@@ -353,6 +383,9 @@ case "$update" in
 		installer_update_template "$template"
 		installer_update_template "$template_override"
 		;;
+	packages)
+		installer_install_blackarch
+		installer_install_packages
 	*)
 		installer_fatal "Unknown update mode '$update'"
 esac
