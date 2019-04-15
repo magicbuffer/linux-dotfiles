@@ -36,6 +36,12 @@ interval=2
 
 [iface]
 label=
+instance=tap0
+color=#00ff7f
+interval=1
+
+[iface]
+label=
 instance=net0
 color=#00ff7f
 interval=1

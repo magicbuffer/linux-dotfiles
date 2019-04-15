@@ -105,7 +105,7 @@ bind2maps emacs             -- -s "$key[Control]a"               emacs-backward-
 bind2maps emacs             -- -s "$key[Control]d"               emacs-forward-word
 bind2maps emacs viins vicmd -- -s "$key[Control]b"               backward-kill-line
 bind2maps emacs viins vicmd -- -s "$key[Control]f"               forward-kill-line
-bind2maps emacs viins       -- -s "$key[Control]t"               insert-datestamp
+#bind2maps emacs viins       -- -s "$key[Control]t"               insert-datestamp
 bind2maps emacs viins       -- -s "$key[Control]s$key[Control]u" sudo-command-line
 bind2maps emacs viins       -- -s "$key[Escape]$key[Backspace]"  slash-backward-kill-word
 bind2maps emacs viins       -- -s "$key[Escape]$key[Delete]"     slash-forward-kill-word
@@ -120,5 +120,4 @@ bind2maps emacs viins vicmd -- -s \]                             magic-square-br
 bind2maps emacs viins vicmd -- -s \}                             magic-curly-brackets
 bind2maps emacs viins vicmd -- -s \>                             magic-angle-brackets
 bind2maps emacs viins       -- -s "$key[Control]x"               zaw
-
 bind2maps emacs viins vicmd -- -s "$key[Control]u"               insert-unicode-char

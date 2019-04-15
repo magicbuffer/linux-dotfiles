@@ -7,7 +7,7 @@ After=network-online.target
 WantedBy=multi-user.target
 
 [Service]
-ExecStart=/usr/local/bin/ethermac.sh -i net1 --assign-by-name "Intel Corporate"
+ExecStart=/usr/local/bin/ethermac -i net1 --assign-by-name "Intel Corporate"
 Type=forking
 NotifyAccess=main
 RemainAfterExit=no

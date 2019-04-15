@@ -325,7 +325,19 @@ function installer_install_blackarch()
 		installer_fatal "Invalid sha1 hash for blackarch bootstrapper 'strap.sh'"
 	fi
 
-	"$bootstrapper"
+	sh "$bootstrapper"
+}
+
+function installer_install_yay()
+{
+	local directory=$(mktemp -d)
+
+	pushd "$directory"
+
+	git clone 'https://aur.archlinux.org/yay.git' .
+	makepkg -si
+
+	popd
 }
 
 function installer_install_packages()
@@ -340,7 +352,7 @@ function installer_install_packages()
 		local packages="$packages $package"
 	done < "$here/../pkg"
 
-	pacman -Sy "$packages"
+	yay -Sy "$packages"
 }
 
 update="installation"
@@ -384,6 +396,7 @@ case "$update" in
 		installer_update_template "$template_override"
 		;;
 	packages)
+		installer_install_yay
 		installer_install_blackarch
 		installer_install_packages
 		;;

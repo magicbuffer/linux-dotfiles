@@ -32,8 +32,8 @@
 ! URxvt*tripleclickwords:               boolean
 ! URxvt*insecure:                       boolean
 ! URxvt*cursorUnderline:                boolean
-! URxvt*background:                     [100]#000000
-  URxvt*background:                     [100]#121212
+  URxvt*background:                     [100]#080808
+! URxvt*background:                     [100]#121212
   URxvt*foreground:                     #888888
   URxvt*color0:                         #3e3e3e
   URxvt*color1:                         #970b16

@@ -10,7 +10,15 @@
 # Alllow loopback connection
 -A INPUT -i lo -j ACCEPT
 
--A INPUT -p tcp --dport 9999 -j ACCEPT 
+# httpd
+#-A INPUT -p tcp --dport 8080 -j ACCEPT
+
+# Reverse shells and metasploit
+#-A INPUT -p tcp --dport 80 -j ACCEPT
+#-A INPUT -p tcp --dport 81 -j ACCEPT
+#-A INPUT -p tcp --dport 82 -j ACCEPT
+#-A INPUT -p tcp --dport 4445 -j ACCEPT
+#-A INPUT -p tcp --dport 4444 -j ACCEPT
 
 # torrents
 #-A INPUT -p tcp --dport 45000 -j ACCEPT 
@@ -18,7 +26,7 @@
 #-A INPUT -p tcp --dport 8200 -j ACCEPT
 
 # Log for intrusion detection
--A INPUT -j LOG
+#-A INPUT -j LOG
 
 # Drop silently if no matches
 -A INPUT -j DROP

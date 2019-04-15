@@ -35,7 +35,7 @@ bindsym --release $mod+s exec /usr/bin/gnome-screenshot -c -a
 bindsym --release $mod+Shift+s exec /usr/bin/gnome-screenshot -a
 bindsym --release $mod+Shift+w exec /usr/bin/gnome-screenshot -w
 # Menu
-bindsym $mod+d exec dmenu_run -fn 'DejaVu Sans Mono 15'
+bindsym $mod+d exec dmenu_run -fn 'DejaVu Sans Mono 15' -nf '#008fff'
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Change focus

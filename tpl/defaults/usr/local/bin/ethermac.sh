@@ -4,7 +4,7 @@
 debug=1
 name=macspoofer
 database=oui.db
-config_dirs="$HOME/.config/$name /etc
+config_dirs="$HOME/.config/$name
 $HOME/.$name
 /etc/$name"
 
