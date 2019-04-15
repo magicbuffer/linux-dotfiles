@@ -122,4 +122,3 @@ bind2maps emacs viins vicmd -- -s \>                             magic-angle-bra
 bind2maps emacs viins       -- -s "$key[Control]x"               zaw
 
 bind2maps emacs viins vicmd -- -s "$key[Control]u"               insert-unicode-char
-

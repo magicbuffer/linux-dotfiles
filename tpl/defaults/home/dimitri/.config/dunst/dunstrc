@@ -144,7 +144,7 @@
     icon_position = off
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_folders = /usr/share/icons/Faenza-Dark/status/16:/usr/share/icons/Faenza-Dark/devices/16
 
 [frame]
     width = 0
@@ -179,7 +179,7 @@
     timeout = 10
 
 [urgency_normal]
-    background = "#285577"
+    background = "#008fff"
     foreground = "#ffffff"
     timeout = 10
 

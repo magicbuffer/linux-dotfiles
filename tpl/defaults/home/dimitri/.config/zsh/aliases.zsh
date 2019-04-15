@@ -13,6 +13,8 @@ alias vpn-switzerland-tcp="$openvpn_wrapper start cyberghost switzerland tcp"
 alias vpn-ukraine-tcp="$openvpn_wrapper start cyberghost ukraine tcp"
 alias vpn-united-kingdom-tcp="$openvpn_wrapper start cyberghost united-kingdom tcp"
 alias vpn-united-states-tcp="$openvpn_wrapper start cyberghost united-states tcp"
+alias vpn-argentina-tcp="$openvpn_wrapper start cyberghost argentina tcp"
+alias vpn-brazil-tcp="$openvpn_wrapper start cyberghost brazil tcp"
 # udp vpn aliases
 alias vpn-australia-udp="$openvpn_wrapper start cyberghost australia udp"
 alias vpn-france-udp="$openvpn_wrapper start cyberghost france udp"
@@ -25,6 +27,8 @@ alias vpn-switzerland-udp="$openvpn_wrapper start cyberghost switzerland udp"
 alias vpn-ukraine-udp="$openvpn_wrapper start cyberghost ukraine udp"
 alias vpn-united-kingdom-udp="$openvpn_wrapper start cyberghost united-kingdom udp"
 alias vpn-united-states-udp="$openvpn_wrapper start cyberghost united-states udp"
+alias vpn-argentina-udp="$openvpn_wrapper start cyberghost argentina udp"
+alias vpn-brazil-udp="$openvpn_wrapper start cyberghost brazil udp"
 # default to tcp
 alias vpn-australia="vpn-australia-tcp"
 alias vpn-france="vpn-france-tcp"
@@ -37,6 +41,8 @@ alias vpn-switzerland="vpn-switzerland-tcp"
 alias vpn-ukraine="vpn-ukraine-tcp"
 alias vpn-united-kingdom="vpn-united-kingdom-tcp"
 alias vpn-united-states="vpn-united-states-tcp"
+alias vpn-argentina="vpn-argentina-tcp"
+alias vpn-brazil="vpn-brazil-tcp"
 
 # Default applications
 alias email="mutt"
@@ -45,6 +51,7 @@ alias top="htop"
 alias vi=vim
 alias ssh='TERM=xterm ssh'
 alias startx='ssh-agent startx'
+alias diff='diff --color'
 
 # Systemd
 alias start="sudo systemctl start"
@@ -61,3 +68,7 @@ alias gl="git log --graph --show-signature"
 alias gba="git branch -av"
 alias gr="git remote -v"
 
+# Trailing
+alias -g S=' | sort '
+alias -g U=' | uniq -c '
+alias -g N=' | sort -nr '

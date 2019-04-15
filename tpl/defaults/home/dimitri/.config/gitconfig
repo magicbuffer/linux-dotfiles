@@ -1,7 +1,11 @@
 [user]
 	email      = "d@magicbuffer.net"
 	name       = "dimitri"
-	signingkey = "1801EB1C873E5FCD2CA6DF9C96C59EB5E29D5EAC"
+	#signingkey = "1801EB1C873E5FCD2CA6DF9C96C59EB5E29D5EAC"
+	signingkey = "1D1509A33CDB95F881736A7496939FE514D58161"
 
-[commit]
-	gpgsign = true
+#[commit]
+#	gpgsign = true
+
+[gpg]
+	program = "/usr/local/bin/gpg-pinentry-gtk"

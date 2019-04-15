@@ -59,6 +59,7 @@ LuciusBlack
 hi LineNr ctermbg=235
 
 " Powerline
+let g:powerline_pycmd = 'py3'
 let g:Powerline_symbols = 'fancy'
 
 " ctrlp

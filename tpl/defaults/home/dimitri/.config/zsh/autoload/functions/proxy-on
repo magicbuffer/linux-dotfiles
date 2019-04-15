@@ -1,20 +1,20 @@
-local port=""
+local host="localhost"
+local port="8080"
 local username=""
 local password=""
 
+read "host?Host (default: localhost)       : "
 read "port?Port (default: 8080)            : "
 read "username?Username (leave empty for anon) : "
 
-if [[ -z $port ]]
-then
-    port="8080"
-fi
+[[ -z $host ]] && host="localhost"
+[[ -z $port ]] && port="8080"
 if [[ -n $username ]]
 then
     read -s "password?Password                        : "
-    export http_proxy="https://$username:$password@proxyserver:$port/"
+    export http_proxy="https://$username:$password@$host:$port/"
 else
-    export http_proxy="https://proxyserver:$port/"
+    export http_proxy="https://$host:$port/"
 fi
 
 export https_proxy="$http_proxy"

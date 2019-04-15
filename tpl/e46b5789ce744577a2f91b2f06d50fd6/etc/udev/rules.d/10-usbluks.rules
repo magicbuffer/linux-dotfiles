@@ -1,0 +1,5 @@
+#ACTION=="add", KERNEL=="sd[b-z]", SUBSYSTEM=="block", ATTR{size}=="1953525168", TAG+="systemd", ENV{UDISKS_AUTO}="1", ENV{UDISKS_SYSTEM}="0", ENV{SYSTEMD_WANTS}="gpg-luks@%k.service"
+ ACTION=="add",    KERNEL=="sd*[0-9]", SUBSYSTEM=="block", ATTR{size}=="1953459633", TAG+="systemd", ENV{UDISKS_AUTO}="1", ENV{UDISKS_SYSTEM}="0", ENV{SYSTEMD_WANTS}="gpg-luks-mount@%k.service"
+# ACTION=="remove", KERNEL=="sd*[0-9]", SUBSYSTEM=="block", ENV{ID_PART_ENTRY_SIZE}=="1953459633", TAG+="systemd", ENV{SYSTEMD_WANTS}="gpg-luks-unmount@%k.service"
+ ACTION=="remove", KERNEL=="sd*[0-9]", SUBSYSTEM=="block", ENV{ID_PART_ENTRY_SIZE}=="1953459633", RUN+="/usr/bin/systemctl start gpg-luks-unmount@%k.service"
+#/usr/local/bin/gpg-luks.sh -u -d %k"

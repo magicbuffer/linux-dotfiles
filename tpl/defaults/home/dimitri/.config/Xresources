@@ -137,3 +137,4 @@
   URxvt*url-launcher:                   /usr/bin/chromium
 ! URxvt*url-select.launcher:            /usr/bin/chromium
   URxvt*url-select.underline:           true
+  Xcursor.size:                         16

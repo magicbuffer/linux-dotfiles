@@ -54,7 +54,7 @@ set to_chars=" +TCF "                     # Drop the "L".
 set wait_key=no                           # I can't loose time
 
 # Where to find the mailcap.
-set mailcap_path=~/.config/mutt/mailcap:/usr/local/etc/mailcap:/etc/mailcap
+set mailcap_path=~/.config/mutt/mailcap
 # What we consider to be a quote.
 set quote_regexp="^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 # Attribution line
@@ -97,8 +97,10 @@ macro attach,compose \cb "<pipe-entry>urlscan --compact --dedupe<enter>" "call u
 macro index,pager X "<pipe-message>$editor -<enter>" "Show the message source"
 
 # HTML is the last option.
-auto_view text/plain
-#alternative_order text/html text/enriched text/plain
+#auto_view text/plain
+#alternative_order text/plain text/enriched text/html
+
+auto_view text/html
 
 # Last, but not least, get mutt to display its version on startup.
 push <show-version>

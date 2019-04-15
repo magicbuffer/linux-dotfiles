@@ -1,0 +1,6 @@
+[Unit]
+Description=Unmount gpg protected luks devices
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/gpg-luks.sh -u -d %I

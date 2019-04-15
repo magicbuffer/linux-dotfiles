@@ -65,6 +65,9 @@ function to-hex()
 	0x)
 		value_hex="$value_data"
 		;;
+	0s)
+		value_hex=$(echo -n "$value_data" | xxd -p)
+		;;
 	esac
 
 	echo -n "$value_hex"

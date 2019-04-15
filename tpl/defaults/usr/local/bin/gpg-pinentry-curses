@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export PINENTRY_USER_DATA=curses
+gpg $@

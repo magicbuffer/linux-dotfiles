@@ -1,0 +1,6 @@
+[Unit]
+Description=Mount gpg protected luks devices
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/gpg-luks.sh -k /etc/luks-1234567AD353.gpg -d %I

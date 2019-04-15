@@ -6,6 +6,8 @@ sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 unclutter="/usr/bin/unclutter"
 
+systemctl --user import-environment DISPLAY
+
 if [ -f $sysresources ]; then
     xrdb -merge $sysresources
 fi

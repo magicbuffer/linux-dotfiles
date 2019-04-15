@@ -1,7 +1,7 @@
 #!/usr/env zsh
 
 local f
-local here=$(realpath $(dirname "$1"))/.config/zsh
+local here=$(realpath "$HOME")/.config/zsh
 
 local _functions="$here/functions"
 local _autoload_functions="$here/autoload/functions"
@@ -15,7 +15,6 @@ local _theme="$here/theme.zsh"
 local _completition="$here/completition.zsh"
 
 local _antigen_local="/usr/share/zsh/share/antigen.zsh"
-
 # Register autoloaded functions and zle widgets
 fpath=( "$_autoload_functions" "$_autoload_widgets" ${fpath[@]} )
 for f in "$_autoload_functions/"*(N:t)
