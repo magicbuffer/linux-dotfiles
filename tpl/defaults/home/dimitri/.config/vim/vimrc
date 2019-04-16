@@ -47,6 +47,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'fatih/vim-go'
 Plug 'jonathanfilip/vim-lucius'
+" Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 

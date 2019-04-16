@@ -53,6 +53,13 @@ polkit
 dmenu
 mesa-demos
 gptfdisk
+gnome-screenshot
+udiskie
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
+thunar-vcs-plugin
 
 # aur
 unclutter-xfixes-git
