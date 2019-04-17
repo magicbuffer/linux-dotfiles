@@ -2,19 +2,19 @@
 
 local f
 local here=$(realpath "$HOME")/.config/zsh
-
 local _functions="$here/functions"
 local _autoload_functions="$here/autoload/functions"
 local _autoload_widgets="$here/autoload/widgets"
-
 local _aliases="$here/aliases.zsh"
 local _environment="$here/environment.zsh"
 local _key_bindings="$here/key-bindings.zsh"
 local _options="$here/options.zsh"
 local _theme="$here/theme.zsh"
 local _completition="$here/completition.zsh"
-
 local _antigen_local="/usr/share/zsh/share/antigen.zsh"
+
+umask 027
+
 # Register autoloaded functions and zle widgets
 fpath=( "$_autoload_functions" "$_autoload_widgets" ${fpath[@]} )
 for f in "$_autoload_functions/"*(N:t)

@@ -378,7 +378,6 @@ then
 	[[ ! -f "/etc/machine-id" ]] && installer_fatal "Unknown machine"
 	machine_id=$(cat "/etc/machine-id")
 	[[ -z "$machine_id" ]] && installer_fatal "Unknown machine" || installer_info "Detected machine '$machine_id'"
-
 fi
 
 template="$here/../tpl/defaults"
