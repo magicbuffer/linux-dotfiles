@@ -7,5 +7,6 @@
 [commit]
 	gpgsign = true
 
+# Warning: pinentry-curses seems to not work properly with git
 [gpg]
-	program = "/usr/local/bin/gpg-pinentry-gtk.sh"
+	program = "/usr/local/bin/gpg-pinentry-qt.sh"
