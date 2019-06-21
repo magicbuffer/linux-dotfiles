@@ -72,12 +72,12 @@ set crypt_replyencrypt = yes
 # pgp settings
 source /usr/share/doc/mutt/samples/gpg.rc
 set pgp_use_gpg_agent = yes
-set pgp_sign_as       = "1801EB1C873E5FCD2CA6DF9C96C59EB5E29D5EAC"
+set pgp_sign_as       = "1D1509A33CDB95F881736A7496939FE514D58161"
 
 #source ~/.config/mutt/auto_views                 # Define auto_views.
 #source ~/.config/mutt/aliases                    # Load in my aliases.
 #source ~/.config/mutt/subscriptions              # Define the list of subscribed mailing lists.
-source "gpg -d ~/.config/mutt/account.1.asc |"
+source "gpg -d ~/.config/mutt/account.2.asc |"
 #source ~/.config/mutt/headers                    # Configure header display.
 #source ~/.config/mutt/folder-hooks               # Define folder-hooks.
 #source ~/.config/mutt/save-hooks                 # Define save-hooks.
