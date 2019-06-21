@@ -28,6 +28,7 @@ set wildmode=longest:full,full
 set number
 set laststatus=2
 set showtabline=2
+set cursorline
 
 " Commands that shell out tend to assume a bourne shell
 set shell=sh
@@ -55,8 +56,10 @@ colorscheme lucius
 LuciusBlack
 "highlight Normal ctermbg=NONE
 "highlight nonText ctermbg=NONE
+hi LineNr ctermbg=235
 
-" Powerline
+" Powerlinea
+let g:powerline_pycmd = 'py3
 let g:Powerline_symbols = 'fancy'
 
 " ctrlp
