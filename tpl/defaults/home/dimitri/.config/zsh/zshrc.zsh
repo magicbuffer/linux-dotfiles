@@ -13,7 +13,9 @@ local _theme="$here/theme.zsh"
 local _completition="$here/completition.zsh"
 local _antigen_local="/usr/share/zsh/share/antigen.zsh"
 
-umask 027
+# Too many issue ...
+#umask 027
+umask 022
 
 # Register autoloaded functions and zle widgets
 fpath=( "$_autoload_functions" "$_autoload_widgets" ${fpath[@]} )
@@ -59,7 +61,7 @@ if is-callable antigen; then antigen init "$here/antigenrc"; fi
 [[ -f "$_key_bindings" ]] && source "$_key_bindings"
 # Options
 [[ -f "$_options" ]] && source "$_options"
-# Completition
+# Completion
 [[ -f "$_completition" ]] && source "$_completition"
 # Theme
 [[ -f "$_theme" && -n "$fg" ]] && source "$_theme"
