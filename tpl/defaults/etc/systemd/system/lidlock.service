@@ -8,7 +8,7 @@ User=dimitri
 #Type=forking
 Environment=DISPLAY=:0
 ExecStartPre=/usr/bin/xset dpms force suspend
-ExecStart=/usr/local/bin/slock
+ExecStart=/usr/bin/slock
 
 [Install]
 WantedBy=sleep.target
