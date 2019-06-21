@@ -1,4 +1,0 @@
-#!/bin/sh
-
-export PINENTRY_USER_DATA=qt
-gpg $@

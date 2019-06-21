@@ -8,4 +8,4 @@
 	gpgsign = true
 
 [gpg]
-	program = "/usr/local/bin/gpg-pinentry-gtk"
+	program = "/usr/local/bin/gpg-pinentry-gtk.sh"

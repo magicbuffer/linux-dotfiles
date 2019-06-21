@@ -13,7 +13,7 @@ qt)
     exec /usr/bin/pinentry-qt "$@"
     ;;                                                                                               
 *)
-    exec /usr/bin/pinentry-curses
+    exec /usr/bin/pinentry-curses "$@"
     ;;
 esac
 
