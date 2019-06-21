@@ -33,8 +33,10 @@ slock
 pacman-contrib
 
 powerline
+powerline-common
 powerline-fonts
 powerline-vim
+python-powerline
 
 otf-font-awesome
 ttf-font-awesome
@@ -42,6 +44,7 @@ ttf-dejavu
 
 pcsclite
 pcsc-tools
+ccid
 
 tree
 htop
