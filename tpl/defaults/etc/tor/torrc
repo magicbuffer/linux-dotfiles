@@ -195,3 +195,9 @@ PidFile /var/run/tor.pid
 ## address manually to your friends, uncomment this line:
 #PublishServerDescriptor 0
 
+
+# Seting up TOR transparent proxy for tor-router
+VirtualAddrNetwork 10.192.0.0/10
+AutomapHostsOnResolve 1
+TransPort 9040
+DNSPort 5353
