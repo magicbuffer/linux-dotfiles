@@ -13,8 +13,8 @@
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
 ! URxvt*thickness:                      number
-! URxvt*scrollTtyOutput:                boolean
-! URxvt*scrollTtyKeypress:              boolean
+! URxvt*scrollTtyOutput:                false
+! URxvt*scrollTtyKeypress:              true
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  true
 ! URxvt*transparent:                    true
@@ -91,7 +91,8 @@
 ! URxvt*lineSpace:                      number
 ! URxvt*letterSpace:                    number
 ! URxvt*skipBuiltinGlyphs:              boolean
-! URxvt*pointerBlankDelay:              number
+! URxvt*pointerBlank:					False
+! URxvt*pointerBlankDelay:              5
 ! URxvt*backspacekey:                   string
 ! URxvt*deletekey:                      string
 ! URxvt*print-pipe:                     string
